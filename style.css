@@ -1,0 +1,324 @@
+/* Importation d'une police futuriste */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap');
+
+:root {
+    --primary: #008cff; /* Bleu Néon */
+    --primary-glow: rgba(0, 140, 255, 0.5);
+    --secondary: #00f2ff; /* Cyan pour les accents */
+    --bg: #050505;
+    --card-bg: rgba(15, 15, 15, 0.8);
+    --text: #e0e0e0;
+    --border: rgba(255, 255, 255, 0.08);
+    --discord: #5865F2; /* Couleur officielle Discord */
+}
+
+* {
+    box-sizing: border-box;
+    cursor: default;
+}
+
+body {
+    background-color: var(--bg);
+    background-image: 
+        radial-gradient(circle at 50% 0%, #01257e 0%, transparent 50%),
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 40px 40px, 40px 40px;
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 2px solid var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 140, 255, 0.2);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: white;
+}
+
+.logo span { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+
+/* --- STYLE BOUTON DISCORD NAV --- */
+.nav-links .btn-discord {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--discord);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.4s;
+    /* On garde la forme coupée pour rester dans le style du site */
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-links .btn-discord:hover {
+    background: #4752c4;
+    box-shadow: 0 0 15px var(--discord);
+    transform: translateY(-2px);
+}
+
+.status-indicator {
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #00ff88;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 10px #00ff88;
+    animation: pulse 1.5s infinite;
+}
+
+/* --- HEADER --- */
+header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+h1.glitch {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+}
+
+.subtitle {
+    color: var(--primary);
+    letter-spacing: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.main-download-btn {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 40px;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.4s;
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+}
+
+.main-download-btn:hover {
+    background: var(--primary);
+    box-shadow: 0 0 30px var(--primary);
+    transform: scale(1.05);
+}
+
+/* --- CARTES D'ETAPES --- */
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+.step-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 40px;
+    margin-bottom: 50px;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.step-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 4px; height: 100%;
+    background: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.step-card:hover {
+    border-color: var(--primary);
+    background: rgba(20, 20, 20, 0.9);
+    transform: perspective(1000px) rotateX(2deg) translateY(-5px);
+}
+
+.step-number {
+    position: absolute;
+    top: 10px; right: 20px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+h2 i { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+
+/* --- ELEMENTS INTERNES --- */
+.custom-list { list-style: none; padding: 0; }
+.custom-list li { margin: 15px 0; font-size: 1.1rem; }
+.custom-list span { color: white; font-weight: bold; }
+.red { color: var(--primary); margin-right: 10px; }
+
+.grid-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.glass-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.glass-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.copy-bar {
+    background: #000;
+    border: 1px dashed var(--primary);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.copy-bar code { color: var(--secondary); }
+
+.reboot-tag {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 15px;
+    animation: flash 2s infinite;
+}
+
+/* --- BOUTON DISCORD FLOTTANT --- */
+.discord-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--discord);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.discord-float:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 0 20px var(--discord);
+}
+
+/* --- TIMELINE INJECTION --- */
+.timeline {
+    border-left: 2px solid var(--border);
+    margin-left: 20px;
+    padding-left: 30px;
+}
+
+.time-item {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.time-item span {
+    position: absolute;
+    left: -42px;
+    width: 24px;
+    height: 24px;
+    background: var(--bg);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.time-item.highlight {
+    color: white;
+    background: rgba(0, 140, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes pulse {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
