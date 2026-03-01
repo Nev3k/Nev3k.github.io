@@ -1,15 +1,15 @@
-/* Importation d'une police futuriste */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap');
 
 :root {
-    --primary: #008cff; /* Bleu Néon */
+    --primary: #008cff; 
     --primary-glow: rgba(0, 140, 255, 0.5);
-    --secondary: #00f2ff; /* Cyan pour les accents */
+    --secondary: #00f2ff; 
     --bg: #050505;
     --card-bg: rgba(15, 15, 15, 0.8);
     --text: #e0e0e0;
     --border: rgba(255, 255, 255, 0.08);
-    --discord: #5865F2; /* Couleur officielle Discord */
+    --discord: #5865F2; 
 }
 
 * {
@@ -30,7 +30,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGATION --- */
+
 nav {
     backdrop-filter: blur(15px);
     background: rgba(0, 0, 0, 0.9);
@@ -54,7 +54,7 @@ nav {
 
 .logo span { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
 
-/* --- STYLE BOUTON DISCORD NAV --- */
+
 .nav-links .btn-discord {
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@ nav {
     font-weight: bold;
     letter-spacing: 1px;
     transition: 0.4s;
-    /* On garde la forme coupée pour rester dans le style du site */
+    
     clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -96,7 +96,7 @@ nav {
     animation: pulse 1.5s infinite;
 }
 
-/* --- HEADER --- */
+
 header {
     text-align: center;
     padding: 80px 20px;
@@ -141,7 +141,7 @@ h1.glitch {
     transform: scale(1.05);
 }
 
-/* --- CARTES D'ETAPES --- */
+
 .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
 .step-card {
@@ -189,7 +189,7 @@ h2 {
 
 h2 i { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
 
-/* --- ELEMENTS INTERNES --- */
+
 .custom-list { list-style: none; padding: 0; }
 .custom-list li { margin: 15px 0; font-size: 1.1rem; }
 .custom-list span { color: white; font-weight: bold; }
@@ -243,7 +243,7 @@ h2 i { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
     animation: flash 2s infinite;
 }
 
-/* --- BOUTON DISCORD FLOTTANT --- */
+
 .discord-float {
     position: fixed;
     bottom: 30px;
@@ -268,7 +268,7 @@ h2 i { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
     box-shadow: 0 0 20px var(--discord);
 }
 
-/* --- TIMELINE INJECTION --- */
+
 .timeline {
     border-left: 2px solid var(--border);
     margin-left: 20px;
@@ -303,7 +303,7 @@ h2 i { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
     border-radius: 5px;
 }
 
-/* --- ANIMATIONS --- */
+
 @keyframes pulse {
     0% { opacity: 0.5; transform: scale(1); }
     50% { opacity: 1; transform: scale(1.2); }
@@ -321,4 +321,5 @@ footer {
     border-top: 1px solid var(--border);
     font-size: 0.8rem;
     letter-spacing: 2px;
+
 }
