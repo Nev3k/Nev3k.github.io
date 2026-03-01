@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Fonction pour copier le chemin du fichier hosts
-    // On peut l'appeler via un bouton dans le HTML si tu en ajoutes un
+    
     window.copyPath = () => {
         const path = "C:\\Windows\\System32\\drivers\\etc";
         navigator.clipboard.writeText(path).then(() => {
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // 2. Animation d'apparition des cartes (Scroll Reveal)
+    
     const observerOptions = {
         threshold: 0.15
     };
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // On applique l'effet sur chaque bloc d'étape
+    
     document.querySelectorAll('.step-card').forEach(card => {
         card.style.opacity = "0";
         card.style.transform = "translateY(30px)";
@@ -31,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 
-    // 3. Smooth Scroll (Défilement doux)
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -45,4 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     console.log("%c Tekaz Unlock System Loaded ", "background: #ff3333; color: #fff; font-weight: bold;");
+
 });
